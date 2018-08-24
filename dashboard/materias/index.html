@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br" >
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+    <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+    <title>Materias</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="../css/style_indexnovo.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <style>
+        .demo-card-wide.mdl-card {
+            width: 512px;
+        }
+        .demo-card-wide > .mdl-card__title {
+            color: #fff;
+            height: 176px;
+            background: url(../images/bg.jpg) center / cover;
+        }
+        .demo-card-wide > .mdl-card__menu {
+            color: #fff;
+        }
+    </style>
+    <script>
+        window.console = window.console || function(t) {};
+    </script>
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+
+
+</head>
+
+<body translate="no" >
+
+<nav class="nav">
+    <div class="burger">
+        <div class="burger__patty"></div>
+    </div>
+
+    <ul class="nav__list">
+        <li class="nav__item">
+            <a href="../nindex.html" class="nav__link c-red"><i class="fa fa-home"></i></a>
+        </li>
+        <li class="nav__item">
+            <a href="#1" class="nav__link c-blue"><i class="fa fa-camera-retro"></i></a>
+        </li>
+        <li class="nav__item">
+            <a href="#2" class="nav__link c-yellow scrolly"><i class="fa fa-bolt"></i></a>
+        </li>
+        <li class="nav__item">
+            <a href="#4" class="nav__link c-green"><i class="fa fa-paper-plane"></i></a>
+        </li>
+    </ul>
+</nav>
+
+<section class="panel b-blue" id="1">
+    <article class="panel__wrapper">
+        <div class="panel__content">
+            <h1 class="panel__headline" Alt="Tirar Foto">Tirar Foto <label class="custom-file-upload mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"><input type="file"  accept="image/*" capture="camera"  onchange="document.getElementById('submit_button_id').click()";/><i class="material-icons">add</i></label></h1>
+            <input type="submit" name="submit" id="submit_button_id" value="Upload" style="display:none;" />
+
+            <div class="panel__block"></div>
+            <p>Função destinada a tirar foto da materia.</p>
+
+        </div>
+    </article>
+</section>
+<section class="panel b-yellow" id="2">
+    <article class="panel__wrapper">
+        <div class="panel__content">
+            <h1 class="panel__headline">Minhas Aulas</h1>
+            <div class="panel__block"></div>
+            <p><style>
+                .demo-card-square.mdl-card {
+                    width: 320px;
+                    height: 320px;
+                }
+                .demo-card-square > .mdl-card__title {
+                    color: #fff;
+                    background:
+                            url('../images/bg.jpg') bottom right 15% no-repeat #46B6AC;
+                }
+            </style>
+
+            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title mdl-card--expand">
+                    <h2 class="mdl-card__title-text">Matematica</h2>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="../audio">
+                        Carregar Audio
+                    </a>
+                </div>
+            </div></p>
+            <p>
+
+            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title mdl-card--expand">
+                    <h2 class="mdl-card__title-text">Matematica - 01</h2>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="../audio">
+                        Carregar audio
+                    </a>
+                </div>
+            </div>
+            </p>
+        </div>
+
+    </article>
+</section>
+
+
+<section class="panel b-green" id="4">
+    <article class="panel__wrapper">
+        <div class="panel__content">
+            <h1 class="panel__headline"><i class="fa fa-paper-plane"></i> Dados Materias</h1>
+            <div class="panel__block"></div>
+            <form action="#">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="sample4" value="Fisica">
+                    <label class="mdl-textfield__label" for="sample4">Nome...</label>
+                </div>
+                <div>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Atualizar Dados</button>
+                </div>
+            </form>
+        </div>
+    </article>
+</section>
+
+
+<div id="id01" class="w3-modal">
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp w3-modal-content">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Nome da Matéria</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            <form action="#">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="sample3">
+                    <label class="mdl-textfield__label" for="sample3">Matéria...</label>
+                </div>
+                <div>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                        Cadastrar
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="mdl-card__menu">
+                 <span onclick="document.getElementById('id01').style.display='none'"
+                       class="w3-button w3-display-topright">&times;</span>
+        </div>
+    </div>
+</div>
+<script src="//static.codepen.io/assets/common/stopExecutionOnTimeout-41c52890748cd7143004e05d3c5f786c66b19939c4500ce446314d1748483e13.js"></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script >
+    var menu = document.querySelector('.nav__list');
+    var burger = document.querySelector('.burger');
+    var doc = $(document);
+    var l = $('.scrolly');
+    var panel = $('.panel');
+    var vh = $(window).height();
+
+    var openMenu = function openMenu() {
+        burger.classList.toggle('burger--active');
+        menu.classList.toggle('nav__list--active');
+    };
+
+    // reveal content of first panel by default
+    panel.eq(0).find('.panel__content').addClass('panel__content--active');
+
+    var scrollFx = function scrollFx() {
+        var ds = doc.scrollTop();
+        var of = vh / 4;
+
+        // if the panel is in the viewport, reveal the content, if not, hide it.
+        for (var i = 0; i < panel.length; i++) {if (window.CP.shouldStopExecution(0)) break;
+            if (panel.eq(i).offset().top < ds + of) {
+                panel.
+                eq(i).
+                find('.panel__content').
+                addClass('panel__content--active');
+            } else {
+                panel.
+                eq(i).
+                find('.panel__content').
+                removeClass('panel__content--active');
+            }
+        }window.CP.exitedLoop(0);
+    };
+
+    var scrolly = function scrolly(e) {
+        e.preventDefault();
+        var target = this.hash;
+        var $target = $(target);
+
+        $('html, body').stop().animate({
+                'scrollTop': $target.offset().top },
+            300, 'swing', function () {
+                window.location.hash = target;
+            });
+    };
+
+    var init = function init() {
+        burger.addEventListener('click', openMenu, false);
+        window.addEventListener('scroll', scrollFx, false);
+        window.addEventListener('load', scrollFx, false);
+        $('a[href^="#"]').on('click', scrolly);
+    };
+
+    doc.on('ready', init);
+    //# sourceURL=pen.js
+</script>
+</body>
+
+</html>
+ 

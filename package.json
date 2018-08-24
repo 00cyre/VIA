@@ -4,15 +4,21 @@
   "description": "via",
   "main": "init.js",
   "dependencies": {
+    "@google-cloud/storage": "^1.7.0",
+    "@google-cloud/text-to-speech": "^0.2.0",
     "@google-cloud/vision": "^0.18.0",
+    "body-parser": "^1.18.3",
     "braille": "^1.1.0",
+    "connect": "^3.6.6",
     "express": "^4.16.3",
-    "mongodb": "^3.0.5",
-    "socket.io": "^2.0.4"
+    "express-session": "^1.15.6",
+    "mysql": "^2.16.0",
+    "socket.io": "^2.1.1",
+    "sqlstring": "^2.3.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "--progress --colors --inline --hot"
   },
   "repository": {
     "type": "git",
@@ -23,5 +29,6 @@
   "bugs": {
     "url": "https://github.com/ceifa/Via-Server-Side/issues"
   },
-  "homepage": "https://github.com/ceifa/Via-Server-Side#readme"
+  "homepage": "https://github.com/ceifa/Via-Server-Side#readme",
+  "keywords": []
 }

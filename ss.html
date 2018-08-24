@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+	
+        $(function() {
+            var socket = io('http://localhost:3000?userid=' + Math.floor((Math.random() * 10) + 1))
+
+            socket.on('testclient', function(data) {
+                console.log(data)
+            })
+			
+			$("#speech").click(function(){
+			    socket.emit('speech', $("#id").val())
+			})
+			
+            $('input[type="file"]').on("change keyup file", async function() {
+                alert("chega")
+                let imageEncoded = await Base64Encode(this.files[0])
+                socket.emit('EncodedImg', imageEncoded)
+            })
+        })
+
+        async function Base64Encode(file) {
+            return new Promise(base64 => {
+                let reader = new FileReader()
+                reader.readAsDataURL(file)
+                reader.onload = function() {
+                    let str = reader.result
+                    let initial = str.indexOf(",") + 1
+                    str = str.substring(initial, str.length)
+                    base64(str)
+                }
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="id">
+	<button type="button" id="speech" class="btn btn-light">AudioDescrição</button>
+    <input type="file" accept="image/*">
+</body>
+
+</html>

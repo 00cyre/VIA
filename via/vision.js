@@ -5,20 +5,22 @@ const client = new vision.ImageAnnotatorClient({
 
 module.exports = class ImageRecognition {
     async getImageRecognitionResponse(fileDir) {
-        return await new Promise(async(res) => {
-            client
-                .textDetection(fileDir)
-                .then(results => {
-                    res(results[0])
-                })
-                .catch(err => {
-                    console.error('ERROR:', err)
+        return await new Promise(async(resolve,reject) => {
+            client.documentTextDetection(fileDir).then(function(e){
+                    resolve(e)
+                }).catch(function(e){
+                    reject(e)
                 })
         })
     }
 
     async getTextFromImage(fileDir) {
-        let recognitionResponse = await this.getImageRecognitionResponse(fileDir)
-        return recognitionResponse.fullTextAnnotation.text
+        return await new Promise(async(resolve,reject) => {
+        this.getImageRecognitionResponse(fileDir).then(function(e){
+                resolve(e)
+            }).catch(function(e){
+                reject(e)
+            })
+        })
     }
 }

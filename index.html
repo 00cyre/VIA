@@ -1,40 +1,302 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>VIA</title>
 
-<head>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-    <script>
-        $(function() {
-            var socket = io('http://localhost:3000?userid=' + Math.floor((Math.random() * 10) + 1))
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 
-            socket.on('testclient', function(data) {
-                console.log(data)
-            })
 
-            $('input[type="file"]').on("change keyup file", async function() {
-                let imageEncoded = await Base64Encode(this.files[0])
-                socket.emit('test', imageEncoded)
-            })
-        })
+			<link rel="stylesheet" href="css/linearicons.css">
+			<link rel="stylesheet" href="css/font-awesome.min.css">
+			<link rel="stylesheet" href="css/bootstrap.css">
+			<link rel="stylesheet" href="css/magnific-popup.css">
+			<link rel="stylesheet" href="css/nice-select.css">					
+			<link rel="stylesheet" href="css/animate.min.css">
+			<link rel="stylesheet" href="css/owl.carousel.css">
+			<link rel="stylesheet" href="css/main.css">
+		</head>
+		
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+		
+		<body>
 
-        async function Base64Encode(file) {
-            return new Promise(base64 => {
-                let reader = new FileReader()
-                reader.readAsDataURL(file)
-                reader.onload = function() {
-                    let str = reader.result
-                    let initial = str.indexOf(",") + 1
-                    str = str.substring(initial, str.length)
-                    base64(str)
-                }
-            })
-        }
-    </script>
-</head>
+			  <header id="header" id="home">
+			    <div class="container">
+			    	<div class="row align-items-center justify-content-between d-flex">
+				      <div id="logo">
+				        <a href="index.html"><img src="img/Logo+Via.png" style="width: 100px;" alt="" title="" /></a>
+				      </div>
+				      <nav id="nav-menu-container">
+				        <ul class="nav-menu">
+				          <li class="menu-active"><a href="#home">Home</a></li>
+				          <li><a href="#convert">Cadastro</a></li>
+				          <li><a href="#feature">Nossa Função</a></li>
+						  	<li><a href="#login">Login</a>
+								<ul>
+									<form method="POST" action="login">
+										<li><input class="form-control" name="Email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" required="" type="email">
+										<li><input class="form-control" name="Senha" placeholder="Senha"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Senha'" required="" type="password">
+										<li><input class="primary-btn header-btn text-uppercase mb-20" type="submit"></li>
+									</form>
+								</ul>
+							</li>
+							<script>
 
-<body>
-    <input type="file" accept="image/*">
-</body>
+							</script>
+				          <!-- <li><a href="#blog">Clientes</a></li> -->
+				            
+				          </li>
+				        </ul>
+				      </nav><!-- #nav-menu-container -->		    		
+			    	</div>
+			    </div>
+			  </header><!-- #header -->
 
-</html>
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">
+				<div class="overlay overlay-bg"></div>		
+				<div class="container">
+					<div class="row fullscreen d-flex align-items-center justify-content-start">
+						<div class="banner-content col-lg-12 col-md-12">
+							<h5 class="text-white text-uppercase">BEM - VINDO</h5>
+							<br>
+							<img src="img/Logo+Via.png" style="width: 50%">
+							<br>
+							<p class="text-white pt-20 pb-20">
+								Educação a um toque
+							</p>
+						</div>												
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->	
+
+			
+			
+			
+			
+			
+			
+		
+
+			<!-- Start convert Area -->
+			<section class="convert-area" id="convert">
+
+					<!--<input type="hidden" name="Id" value="<?=$id?>">-->
+
+					<div class="container">
+						<div class="convert-wrap">
+							<div class="row justify-content-center align-items-center flex-column pb-30">
+								<h1 class="text-white">Realizar Cadastro</h1>
+								<p class="text-white">Vamos precisar de alguns dados seus, caro usario.</p>
+							</div>
+							<div class="row justify-content-center align-items-start">
+								<div class="col-lg-2 cols-img">
+								</div>
+								<div class="col-lg-3 cols">
+									<form method="POST" id="forms" action="cadastro">
+										<input type="text" 	   name="nome_usu" placeholder="Nome" class="form-control mb-20" >
+										<input type="text"     name="Email"    placeholder="Email" class="form-control mb-20" >
+										<input type="password" name="Senha"    placeholder="Senha" class="form-control mb-20" >
+										<input class="primary-btn header-btn text-uppercase mb-20" type="submit">
+									</form>
+									
+								</div>
+								<div class="col-lg-2 cols">
+								</div>
+							</div>						
+						</div>
+					</div>
+                </form>				
+			</section>
+			<!-- End convert Area -->
+			
+
+			<!-- Start simple-services Area -->
+			<section class="simple-services-area section-gap">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4 single-services">
+							<img src="https://png.icons8.com/color/80/000000/lol.png">
+							<a href="#"><h4 class="pt-30 pb-20">Como Funciona o VIA ?</h4></a>
+							<p>
+								O porjeto VIA foi pensado e criado para auxiliar os deficientes visuais, a ideia e ajuda-los a interagir mais em sala de aula.
+							</p>
+						</div>
+						<div class="col-lg-4 single-services">
+							<img src="https://png.icons8.com/color/80/000000/question.png">
+							<a href="#"><h4 class="pt-30 pb-20">E porque usa-lo?</h4></a>
+							<p>
+								A utilização do VIA, vai auxiliar, ajudar-lo e ensina-lo em salaa de aula atraves de um aplicativo que tera audio-descrição com base na foto tirada.
+							</p>
+						</div>
+						<div class="col-lg-4 single-services">
+							<img src="https://png.icons8.com/color/80/000000/smiling-face-with-heart.png">
+							<a href="#"><h4 class="pt-30 pb-20">E assim?</h4></a>
+							<p>
+								Proporcionando um estudo no meio de todos os alunos e mais conteudo.
+							</p>
+						</div>												
+					</div>
+				</div>	
+			</section>
+			<!-- End simple-services Area -->
+
+			<!-- Start service Area -->
+			<section class="service-area section-gap" id="feature" style="background-color: #777; color: whitesmoke">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="col-md-9 pb-40 header-text">
+							<h1>Como usar-lo?</h1>
+							<p>
+								<img src="https://png.icons8.com/color/30/000000/sleeping.png"> Primeiro terá que ser feito seu <a href="dashboard/register.html"style="color: white">Cadastro</a>.
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-6">
+							<div class="single-service">
+								<h4><img src="https://png.icons8.com/color/30/000000/user-typing-using-typewriter.png"> Criar as Materias.</h4>
+								<p>
+									Apos o cadastro você ira digitar as matérias que tem em sua escola. Caso a sua escola possua o nosso sistema VIA não e preciso.
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="single-service">
+								<h4><img src="https://png.icons8.com/color/30/000000/class.png"> Menu + Uso da camera</h4>
+								<p>Após criar as materia você estara em nosso menu, onde tera acesso a camera que ira tirar foto do quadro, livro ou qualquer local que tenha algo escrito.</p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="single-service">
+								<h4><img src="https://png.icons8.com/office/30/000000/rabbit.png"> O uso do Plob</h4>
+								<p>
+									O plob e a nossa camera, terá um icone no meu que você entrara nele e tirar foto do objeto que contem texto. Apos a foto voce ira definir qual materia é. Aqueleas que você criou quando realizou o cadastro.
+									Apos enviar a foto, você ira da play e comecar ouvir o Audio e Descrição da foto tirada.
+								</p>								
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="single-service">
+								<h4><img src="https://png.icons8.com/color/30/000000/angel.png"> Assistentes</h4>
+								<p>
+									O app tambem tem a opção de ver suas notas da escola, adcionar lembretes e avisos de professores.
+								</p>				
+							</div>
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End service Area -->		
+
+			<script>
+			$(function(){
+				if( navigator.userAgent.match(/Android/i)
+                        || navigator.userAgent.match(/webOS/i)
+                        || navigator.userAgent.match(/iPhone/i)
+                        || navigator.userAgent.match(/iPad/i)
+                        || navigator.userAgent.match(/iPod/i)
+                        || navigator.userAgent.match(/BlackBerry/i)
+                        || navigator.userAgent.match(/Windows Phone/i)
+                        ){                       
+                            window.location.replace("./indexm.html");
+                        }
+                        else
+                        {
+                        }
+			})
+			</script>
+			<!-- start footer Area -->		
+			<footer class="footer-area section-gap">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3  col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h4 class="text-white">About Us</h4>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-3  col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h4 class="text-white">Top Products</h4>
+								<ul class="footer-menu">
+									<li><a href="#">Managed Website</a></li>
+									<li><a href="#">Managed Reputation</a></li>
+									<li><a href="#">Managed Tools</a></li>
+									<li><a href="#">Managed Service</a></li>
+								</ul>
+									
+							</div>
+						</div>						
+						<div class="col-lg-6  col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h4 class="text-white">Newsletter</h4>
+								<p>You can trust us. we only send  offers, not a single spam.</p>
+								<div class="d-flex flex-row" id="mc_embed_signup">
+									  <form class="navbar-form" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get">
+									    <div class="input-group add-on">
+									      	<input class="form-control" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required="" type="email">
+											<div style="position: absolute; left: -5000px;">
+												<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+											</div>
+									      <div class="input-group-btn">
+									        <button class="genric-btn"><span class="lnr lnr-arrow-right"></span></button>
+									      </div>
+									    </div>
+									      <div class="info mt-20"></div>									    
+									  </form>
+								</div>
+							</div>
+						</div>						
+					</div>
+					<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
+						<div class="footer-social d-flex align-items-center">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div>
+					</div>
+				</div>
+			</footer>	
+			<!-- End footer Area -->
+
+			<script src="js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="js/vendor/bootstrap.min.js"></script>			
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="js/easing.min.js"></script>			
+			<script src="js/hoverIntent.js"></script>
+			<script src="js/superfish.min.js"></script>	
+			<script src="js/jquery.ajaxchimp.min.js"></script>
+			<script src="js/jquery.magnific-popup.min.js"></script>	
+			<script src="js/owl.carousel.min.js"></script>			
+			<script src="js/jquery.sticky.js"></script>
+			<script src="js/jquery.nice-select.min.js"></script>			
+			<script src="js/parallax.min.js"></script>	
+			<script src="js/waypoints.min.js"></script>
+			<script src="js/jquery.counterup.min.js"></script>			
+			<script src="js/mail-script.js"></script>	
+			<script src="js/main.js"></script>	
+		</body>
+	</html>
+
+
+

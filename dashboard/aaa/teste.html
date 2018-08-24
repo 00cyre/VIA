@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tirar Fotos</title>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <style>
+        video { border: 1px solid #ccc; display: block; margin: 0 0 20px 0; }
+        #canvas { margin-top: 20px; border: 1px solid #ccc; display: block; }
+    </style>
+</head>
+<body>
+    <form action="mail.php" method="POST" enctype="multipart/form-data" >
+
+        <div class="panel panel-default">
+
+
+            <div class="form-group">
+                Tire uma foto de do seu erro na tela do computador
+            </div>
+
+
+            <div class="panel-heading">
+                <div style="background:#F9F9F9";>
+                    <input type="hidden"  name="nomeu" value="">
+                    <input type="file" name="file" id="file" class="inputfile"  accept="image/*" capture="camera"  onchange="document.getElementById('submit_button_id').click();"/>
+                    <label for="file">Abrir Câmera</label>
+                    <input type="submit" name="submit" id="submit_button_id" value="Upload" style="display:none;" />
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

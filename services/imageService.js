@@ -7,12 +7,24 @@ module.exports = class ImageService {
         this._db = new db(collection)
     }
 
-    async insertImage(user) {
-        let toInsert = { user }
-
-        return await new Promise(async(response) => {
-            let res = await this._db.insert(toInsert)
-            response(res)
+    async insertImage(image,text,user) {
+        //let toInsert =  user 
+        return await new Promise(async(resolve,reject) => {
+            this._db.insertimg(image,text,user).then(function(e){
+                resolve(e)
+            }).catch(function(e){
+                reject(e)
+            })
+        })
+    }
+    async selectImage(uid) {
+        //let toInsert =  user 
+        return await new Promise(async(resolve) => {
+            this._db.selectimg(uid).then(function(e){
+                resolve(e)
+            }).catch(function(e){
+                reject(e)
+            })
         })
     }
 }

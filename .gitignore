@@ -1,5 +1,7 @@
 images
 
+node_modules
+googlekey.json
 # Logs
 logs
 *.log
